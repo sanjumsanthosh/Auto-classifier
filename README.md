@@ -35,6 +35,51 @@ $  build
 $  start:prod
 ```
 
+<!-- example api documentaion -->
+
+## API Documentation
+
+- [Swagger](http://localhost:8083/doc/)
+
+<!-- post api.  -->
+<!-- curl -X 'POST' \
+  'http://localhost:8083/rest/openai/predict' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "query": "Hackers can use SQL injection to bypass login",
+  "type": "dance"
+}' -->
+
+<!-- respnse  {
+  "corrected_sentance": "Hackers can bypass login using SQL injection.",
+  "score": "4"
+}-->
+
+### API Endpoints
+
+- POST `/rest/openai/predict`
+
+  - Sample Request Body
+
+    ```json
+    {
+      "query": "Hackers can use SQL injection to bypass login",
+      "type": "dance"
+    }
+    ```
+
+  - Sample Response Body
+
+    ```json
+    {
+      "corrected_sentance": "Hackers can bypass login using SQL injection.",
+      "score": "4"
+    }
+    ```
+
+    
+
 ## Docker
 
 ```
